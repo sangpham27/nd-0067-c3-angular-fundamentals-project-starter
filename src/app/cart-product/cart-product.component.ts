@@ -11,7 +11,6 @@ export class CartProductComponent implements OnInit {
 
   @Input() product!: CartProduct;
   @Output() deleteProduct: EventEmitter<number> = new EventEmitter();
-  amount: number = 1;
 
   constructor(private cart: CartService) { }
 
@@ -23,20 +22,12 @@ export class CartProductComponent implements OnInit {
   }
 
   updateAmount = (product: CartProduct, value: string) => {
-    this.amount = parseInt(value, 10);
-    if (this.amount < 1){
+    const amount = parseInt(value, 10);
+    if (amount < 1){
       this.deleteProduct.emit(product.id);
     }
-    this.cart.updateAmount(product.id, this.amount);
-    this.product.amount = this.amount;
-    this.refreshPage()
-  }
-
-  deletedItem(id: number){
-    const product = this.cart.getCartProducts().find((product) => product.id === id);
-    this.cart.removeFromCart(id)
-    const message = `${product?.name} has been removed from your cart.`;
-    alert(message);
+    this.cart.updateAmount(product.id, amount);
+    this.product.amount = amount;
     this.refreshPage()
   }
 
