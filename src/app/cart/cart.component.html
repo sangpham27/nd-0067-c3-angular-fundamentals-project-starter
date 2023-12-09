@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-6">
+            <ul>
+                <li *ngFor="let product of cartProducts" class="mb-5">
+                    <app-cart-product [product]="product" (deleteProduct)="deleteProduct($event)"></app-cart-product>
+                </li>
+                <p class="font-weight-bold">Total: {{totalPrice | currency}}</p>
+            </ul>
+        </div>
+        <div class="col-6">
+            <app-checkout-form (userInfo)="onSubmit($event)"></app-checkout-form>
+        </div>
+    </div>
+</div>

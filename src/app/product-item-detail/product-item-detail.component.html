@@ -1,0 +1,18 @@
+<div class="product-item" *ngIf="product">
+    <img class="product-item__image" src="{{ product?.url }}" alt="{{product?.name}}" />
+    <div class="product-item__info">
+        <h2>{{ product?.name }}</h2>
+        <p class="product-item__description">{{ product?.description }}</p>
+        <p class="price my-2">{{ product?.price | currency }}</p>
+        <form (ngSubmit)="addProductToCart(product)">
+            <select id="amount" #amountSelector (change)="selectedChange(amountSelector.value)"  class="custom-select d-block">
+                <option *ngFor="let item of [].constructor(15) let number = index" value="{{number + 1}}">{{number + 1}}</option>
+            </select>
+            <input type="submit" value="Add to Cart" class="mt-2 btn btn-primary btn-add" />
+        </form>
+        <div class="mt-2 card-link">
+            <a class="back-button" (click)="goBack()">Back to product list</a>
+        </div>
+    </div>
+</div>
+

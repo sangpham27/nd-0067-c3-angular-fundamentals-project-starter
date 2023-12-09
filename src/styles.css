@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+:root {
+    --primary-color: #0b3082;
+    --secondary-color: #2196f3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Nunito', "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    line-height: 1.4em;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+select {
+    cursor: pointer;
+}

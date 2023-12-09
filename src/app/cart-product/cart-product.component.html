@@ -1,0 +1,11 @@
+<div class="product d-flex align-items-center">
+    <img class="w-25 h-auto rounded" src="{{product.url}}" [alt]="product.name">
+    <div class="productDetail ml-5">
+        <p class="font-weight-bold">{{product.name}}</p>
+        <p class="pt-2 pb-2">{{product.price | currency}}</p>
+        <div class="d-flex align-items-center">
+            <label for="amount">Amount: </label>
+            <input class="custom-select ml-2 w-50" type="number" #amountSelector id="amount" value="{{product.amount}}" (change)="updateAmount(product, amountSelector.value)">
+        </div>
+    </div>
+</div>

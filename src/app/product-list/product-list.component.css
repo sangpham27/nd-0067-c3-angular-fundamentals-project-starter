@@ -1,0 +1,6 @@
+.productList {
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+    flex-direction: row;
+}
