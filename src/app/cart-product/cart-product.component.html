@@ -2,10 +2,17 @@
     <img class="w-25 h-auto rounded" src="{{product.url}}" [alt]="product.name">
     <div class="productDetail ml-5">
         <p class="font-weight-bold">{{product.name}}</p>
-        <p class="pt-2 pb-2">{{product.price | currency}}</p>
-        <div class="d-flex align-items-center">
+        <p class="my-4">{{product.price | currency}}</p>
+        <div class="d-flex align-items-center my-4 justify-content-center">
             <label for="amount">Amount: </label>
-            <input class="custom-select ml-2 w-50" type="number" #amountSelector id="amount" value="{{product.amount}}" (change)="updateAmount(product, amountSelector.value)">
+            <select id="amount" [(ngModel)]="amount" (ngModelChange)="updateAmount(product ,$event)" [ngModelOptions]="{standalone: true}"  class="custom-select ml-2">
+                <option *ngFor="let item of [].constructor(15) let number = index" value="{{number + 1}}">{{number + 1}}</option>
+            </select>
+        </div>
+        <div class="cart-detail">
+            <button (click)="deletedItem(product.id)" class="btn-link border-0 p-0 m-0 bg-white">
+                Remove
+            </button>
         </div>
     </div>
 </div>

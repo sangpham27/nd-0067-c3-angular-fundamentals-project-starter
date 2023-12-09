@@ -5,7 +5,7 @@
         <p class="product-item__description">{{ product?.description }}</p>
         <p class="price my-2">{{ product?.price | currency }}</p>
         <form (ngSubmit)="addProductToCart(product)">
-            <select id="amount" #amountSelector (change)="selectedChange(amountSelector.value)"  class="custom-select d-block">
+            <select id="amount" [(ngModel)]="selectedItem" (ngModelChange)="selectedChange($event)" [ngModelOptions]="{standalone: true}"  class="custom-select d-block">
                 <option *ngFor="let item of [].constructor(15) let number = index" value="{{number + 1}}">{{number + 1}}</option>
             </select>
             <input type="submit" value="Add to Cart" class="mt-2 btn btn-primary btn-add" />

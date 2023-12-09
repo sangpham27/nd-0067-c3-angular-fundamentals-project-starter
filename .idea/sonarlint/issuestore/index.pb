@@ -76,12 +76,6 @@ N
 src/app/cart/cart.component.ts,4/b/4bf47e1e14513e92ee6f6466d0c459a0be5d997c
 S
 #src/app/cart/cart.component.spec.ts,3/8/3894999206cb272c3b0467203b426a83f5321a74
-b
-2src/app/checkout-form/checkout-form.component.html,4/4/4405496391e99ca91073d182833dc7bcce48f82b
-`
-0src/app/checkout-form/checkout-form.component.ts,c/b/cbb31dd9bcf07b19ba88b5823d59cefc62827475
-a
-1src/app/checkout-form/checkout-form.component.css,7/2/728634358baa40661fda178304aeaa275d9342fe
 Z
 *src/app/services/in-memory-data.service.ts,6/6/66e6cd9f2fa624ced1da12c2bcb359ac8a723ef4
 Q
@@ -100,20 +94,14 @@ E
 src/models/Product.ts,8/f/8fdfa56e6953b05ac0e858b07a72e4182ed99fd1
 L
 src/app/models/user.model.ts,b/e/be4e639fa66a5a56c9718e561feb1cefb39c4fad
-]
--src/app/cart/user-info/user-info.component.ts,2/1/21bd0debb48c944de6df013a1b78cfcfbf4daecf
 h
 8src/app/checkout-success/checkout-success.component.html,c/e/cead7bb6fe77ec2388e338ce5371d90238838b2d
 P
  src/app/services/user.service.ts,a/d/ada3c8ef83215f42c63110fa812da6fe69eb8de5
-`
-0src/app/confirmation/confirmation.component.html,4/0/4037af08d99aa869151ba52781bab73f232e3e13
 f
 6src/app/checkout-success/checkout-success.component.ts,2/6/2641a3a782c7e7dc946e8f87676026789a8ef286
 k
 ;src/app/checkout-success/checkout-success.component.spec.ts,5/2/52cd93c94f9e7a79f76277087e004c4e0834e851
-g
-7src/app/checkout-success/checkout-success.component.css,b/9/b98685c710d9e6db2607c4a035b7d57390bb5307
 h
 8src/app/checkout-success/checkout-success.component.scss,2/a/2a2c3c25fbca6d0421f4796546cf7bdc6b5cd942
 n
@@ -131,3 +119,5 @@ n
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+c
+3src/app/cart-product/cart-product.component.spec.ts,e/4/e42939e4e18fcd2ad4bfabae95ac398d8009b8eb
