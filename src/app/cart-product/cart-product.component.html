@@ -3,16 +3,9 @@
     <div class="productDetail ml-5">
         <p class="font-weight-bold">{{product.name}}</p>
         <p class="my-4">{{product.price | currency}}</p>
-        <div class="d-flex align-items-center my-4 justify-content-center">
+        <div class="d-flex align-items-center">
             <label for="amount">Amount: </label>
-            <select id="amount" [(ngModel)]="amount" (ngModelChange)="updateAmount(product ,$event)" [ngModelOptions]="{standalone: true}"  class="custom-select ml-2">
-                <option *ngFor="let item of [].constructor(15) let number = index" value="{{number + 1}}">{{number + 1}}</option>
-            </select>
-        </div>
-        <div class="cart-detail">
-            <button (click)="deletedItem(product.id)" class="btn-link border-0 p-0 m-0 bg-white">
-                Remove
-            </button>
+            <input type="number" [(ngModel)]="product.amount" id="amount" value="{{product.amount}}" (ngModelChange)="updateAmount(product, $event)" class="form-control w-25 ml-2">
         </div>
     </div>
 </div>

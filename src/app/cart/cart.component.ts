@@ -29,6 +29,9 @@ export class CartComponent implements OnInit {
 
   deleteProduct = (id: number) => {
     this.cart.removeFromCart(id);
+    const product= this.cartProducts.find(p => p.id === id)
+    const message = `${product?.name} has been added to your cart.`;
+    alert(message);
     this.cartProducts = this.cartProducts.filter(p => p.id !== id)
   }
 
